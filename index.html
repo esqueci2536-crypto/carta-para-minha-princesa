@@ -1,116 +1,105 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Para minha princesa!</title>
 
 <style>
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  background: linear-gradient(180deg, #fff, #ffe6f0);
-  color: #5c2940;
-  font-family: Georgia, serif;
-  overflow-x: hidden;
+    margin: 0;
+    background: linear-gradient(135deg, #fff, #ffe5ef);
+    font-family: Georgia, serif;
+    color: #5a3042;
 }
 
 .carta {
-  max-width: 700px;
-  margin: auto;
-  padding: 30px 20px 60px;
+    max-width: 700px;
+    margin: auto;
+    padding: 25px 18px;
 }
 
-.folha {
-  background: rgba(255,255,255,0.94);
-  border: 1px solid #f2b8cc;
-  border-radius: 22px;
-  padding: 35px 25px;
-  margin-bottom: 25px;
-  box-shadow: 0 8px 30px rgba(180,70,110,0.12);
+.pagina {
+    background: white;
+    border: 1px solid #efb6cb;
+    border-radius: 20px;
+    padding: 28px 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(100,40,70,.12);
 }
 
-.intro {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+h1, h2 {
+    text-align: center;
+    color: #b84d78;
 }
 
 h1 {
-  color: #c94f7c;
-  font-size: 38px;
-  margin-bottom: 12px;
+    font-size: 34px;
 }
 
-h2 {
-  color: #c94f7c;
-  text-align: center;
-  font-size: 28px;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.8;
+.texto {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
 }
 
 .data {
-  text-align: center;
-  font-size: 21px;
-  color: #a83f68;
+    text-align: center;
+    font-size: 25px;
+    color: #b84d78;
+    margin-top: 15px;
 }
 
 .contador {
-  margin: 18px auto;
-  padding: 15px;
-  border: 1px solid #efb0c6;
-  border-radius: 15px;
-  text-align: center;
-  background: #fff7fa;
-  font-size: 18px;
+    text-align: center;
+    margin-top: 12px;
+    color: #8e4965;
+    line-height: 1.6;
 }
 
-.foto {
-  width: 100%;
-  border-radius: 18px;
-  margin-top: 20px;
-  box-shadow: 0 5px 20px rgba(100,30,60,0.15);
+.musica {
+    text-align: center;
+    margin-top: 20px;
 }
 
-video {
-  width: 100%;
-  border-radius: 18px;
-  margin-top: 20px;
+.musica iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+    border-radius: 15px;
+}
+
+.momento {
+    margin-top: 30px;
+}
+
+.momento img,
+.momento video {
+    width: 100%;
+    max-width: 550px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 16px;
 }
 
 .legenda {
-  text-align: center;
-  font-size: 17px;
-  font-style: italic;
-  color: #87415d;
+    text-align: center;
+    font-style: italic;
+    color: #8e4965;
 }
 
 .final {
-  text-align: center;
-}
-
-.eu-te-amo {
-  margin-top: 30px;
-  color: #c94f7c;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.linha {
-  width: 70px;
-  height: 2px;
-  background: #e6a1b9;
-  margin: 20px auto;
+    text-align: center;
+    color: #b84d78;
+    font-size: 25px;
+    margin-top: 25px;
 }
 </style>
 </head>
@@ -119,138 +108,154 @@ video {
 
 <div class="carta">
 
-  <section class="folha intro">
-    <h1>Para minha princesa!</h1>
-    <div class="linha"></div>
-    <p>
-      Essa é uma pequena parte de tudo que eu sinto por você.
-    </p>
-    <p>
-      Fiz essa carta para guardar alguns dos nossos momentos
-      e lembrar o quanto nossa história é importante para mim.
-    </p>
-  </section>
+    <!-- APRESENTAÇÃO -->
+    <section class="pagina">
+        <h1>Para minha princesa!</h1>
+
+        <p class="texto">
+            Uma carta feita especialmente para você.
+        </p>
+    </section>
 
 
-  <section class="folha">
-    <h2>Nossa história começou</h2>
+    <!-- MÚSICA -->
+    <section class="pagina">
+        <h2>Nossa música</h2>
 
-    <div class="data">
-      27/12/2024
-    </div>
-
-    <div class="contador" id="contador">
-      Carregando nossa contagem...
-    </div>
-  </section>
-
-
-  <section class="folha">
-    <h2>Uma música para você</h2>
-
-    <p style="text-align:center;">
-      Uma música que faz parte dessa carta.
-    </p>
-
-    <!-- A música será colocada aqui depois -->
-    <audio controls style="width:100%;">
-      <source src="musica.mp3" type="audio/mpeg">
-    </audio>
-  </section>
+        <div class="musica">
+            <iframe
+                src="https://www.youtube.com/embed/szts-5Zs5_8"
+                title="Nossa música"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
 
 
-  <section class="folha">
-    <h2>Você é muito importante para mim</h2>
+    <!-- NOSSA HISTÓRIA -->
+    <section class="pagina">
 
-    <p>
-      Você foi o melhor presente que Jesus me deu! Você foi minha melhor escolha!
-      Você é o motivo de eu tentar ser alguém melhor todos os dias.
-      Você foi a única pessoa que me mudou de verdade, a única pessoa que me fez
-      deixar de ser orgulhoso! A única pessoa que me fez voltar à igreja!
-      E eu espero que, um dia, nós possamos louvar a Ele juntos!
-      Se eu tivesse mais 100 vidas, em todas elas eu escolheria você.
-    </p>
+        <h2>Nossa história começou</h2>
 
-    <img class="foto" src="foto-principal.jpg">
+        <div class="data">
+            27/12/2024
+        </div>
 
-    <p class="legenda">Nossa única foto</p>
-  </section>
+        <div class="contador" id="contador">
+            Calculando nossa história...
+        </div>
+
+    </section>
 
 
-  <section class="folha">
-    <h2>Momentos</h2>
+    <!-- TEXTO PRINCIPAL -->
+    <section class="pagina">
 
-    <h3>14/06/2026</h3>
-    <img class="foto" src="foto-principal.jpg">
-    <p class="legenda">Nossa primeira fotoo</p>
+        <p class="texto">
+            Você foi o melhor presente que Jesus me deu!
+            Você foi minha melhor escolha!
+            Você é o motivo de eu tentar ser alguém melhor todos os dias.
+            Você foi a única pessoa que me mudou de verdade,
+            a única pessoa que me fez deixar de ser orgulhoso!
+            A única pessoa que me fez voltar à igreja!
+            E eu espero que, um dia, nós possamos louvar a Ele juntos!
+            Se eu tivesse mais 100 vidas, em todas elas eu escolheria você.
+        </p>
 
-    <h3>30/03/2026</h3>
-    <video controls>
-      <source src="VID_20260330_080024~2.mp4" type="video/mp4">
-    </video>
-    <p class="legenda">vc não esqueceu disso né?</p>
-
-    <h3>26/05/2026</h3>
-    <img class="foto" src="IMG_20260225_072054_524.jpg">
-    <p class="legenda">Nossa família!!</p>
-
-    <h3>05/11/2025</h3>
-    <img class="foto" src="momento-21-11-2025.jpg">
-    <p class="legenda">Quando você não apareceu pra me ver😔</p>
-  </section>
+    </section>
 
 
-  <section class="folha final">
-    <h2>Para terminar...</h2>
+    <!-- MOMENTOS -->
+    <section class="pagina">
 
-    <p>
-      Meu amor, nossa história não está sendo fácil, mais está sendo incrível,
-      e a cada dia q passa, eu me sinto mais feliz ao seu lado!!!
-      Eu nunca vou desistir de você minha cachiadinha!!
-      Obrigado por fazer parte de todos meus dias, obrigado por conseguir
-      alegramos, você e minha melhor amiga!!
-      Meu primeiro e único amor!!!
-    </p>
+        <h2>Momentos</h2>
 
-    <div class="eu-te-amo">
-      Eu te amo infinitamente
-    </div>
-  </section>
+        <div class="momento">
+            <p class="legenda">02/09/2025</p>
+            <p class="legenda">
+                Lembra quando saímos pra se ver?
+            </p>
+
+            <!-- COLOQUE A FOTO DO MOMENTO 1 AQUI -->
+        </div>
+
+
+        <div class="momento">
+            <p class="legenda">04/01/2025</p>
+            <p class="legenda">
+                Quando vc estava terminando comigo🙄
+            </p>
+
+            <!-- COLOQUE O VÍDEO DO MOMENTO 2 AQUI -->
+        </div>
+
+
+        <div class="momento">
+            <p class="legenda">30/03/2026</p>
+
+            <!-- COLOQUE A FOTO/VÍDEO DO MOMENTO 3 AQUI -->
+        </div>
+
+    </section>
+
+
+    <!-- TEXTO FINAL -->
+    <section class="pagina">
+
+        <p class="texto">
+            Meu amor, nossa história não está sendo fácil, mais está sendo incrível,
+            e a cada dia q passa, eu me sinto mais feliz ao seu lado!!!
+            Eu nunca vou desistir de você minha cachiadinha!!
+            Obrigado por fazer parte de todos meus dias, obrigado por conseguir
+            alegramos, você e minha melhor amiga!!
+            Meu primeiro e único amor!!!
+        </p>
+
+        <div class="final">
+            eu te amo infinitamente
+        </div>
+
+    </section>
 
 </div>
 
+
 <script>
+
 const inicio = new Date("2024-12-27T00:00:00");
 
 function atualizarContador() {
-  const agora = new Date();
 
-  let anos = agora.getFullYear() - inicio.getFullYear();
-  let meses = agora.getMonth() - inicio.getMonth();
-  let dias = agora.getDate() - inicio.getDate();
+    const agora = new Date();
 
-  if (dias < 0) {
-    meses--;
-    const ultimoMes = new Date(
-      agora.getFullYear(),
-      agora.getMonth(),
-      0
-    ).getDate();
-    dias += ultimoMes;
-  }
+    let anos = agora.getFullYear() - inicio.getFullYear();
+    let meses = agora.getMonth() - inicio.getMonth();
 
-  if (meses < 0) {
-    anos--;
-    meses += 12;
-  }
+    if (agora.getDate() < inicio.getDate()) {
+        meses--;
+    }
 
-  document.getElementById("contador").innerHTML =
-    anos + " anos, " + meses + " meses e " + dias + " dias";
+    if (meses < 0) {
+        anos--;
+        meses += 12;
+    }
+
+    const dias = Math.floor(
+        (agora - inicio) / (1000 * 60 * 60 * 24)
+    );
+
+    document.getElementById("contador").innerHTML =
+        anos + " anos • " +
+        meses + " meses • " +
+        dias + " dias juntos";
 }
 
 atualizarContador();
-setInterval(atualizarContador, 86400000);
+
+setInterval(atualizarContador, 1000);
+
 </script>
 
 </body>
-  </html>
+</html>
