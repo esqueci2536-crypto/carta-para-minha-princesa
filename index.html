@@ -165,114 +165,55 @@ h1 {
     </section>
 
 
-    <!-- MOMENTOS -->
-    <section class="pagina">
+   <!-- MOMENTOS -->
+<section class="pagina">
 
-        <h2>Momentos</h2>
+    <h2>Momentos</h2>
 
-
-        <!-- MOMENTO 1 -->
-        <div class="momento">
-            <p class="legenda">14/06/2026</p>
-            <p class="legenda">
-                Nossa primeira foto
-            </p>
-
-            <!-- FOTO DO MOMENTO 1 AQUI -->
-        </div>
-
-
-        <!-- MOMENTO 2 -->
-        <div class="momento">
-            <p class="legenda">30/03/2026</p>
-            <p class="legenda">
-                vc não esqueceu disso né?
-            </p>
-
-            <!-- VÍDEO DO MOMENTO 2 AQUI -->
-        </div>
-
-
-        <!-- MOMENTO 3 -->
-        <div class="momento">
-            <p class="legenda">26/05/2026</p>
-            <p class="legenda">
-                Nossa família!!
-            </p>
-
-            <!-- FOTO DO MOMENTO 3 AQUI -->
-        </div>
-
-
-        <!-- MOMENTO 4 -->
-        <div class="momento">
-            <p class="legenda">05/11/2025</p>
-            <p class="legenda">
-                Quando você não apareceu pra me ver😔
-            </p>
-
-            <!-- FOTO DO MOMENTO 4 AQUI -->
-        </div>
-
-    </section>
-
-
-    <!-- TEXTO FINAL -->
-    <section class="pagina">
-
-        <p class="texto">
-            Meu amor, nossa história não está sendo fácil, mais está sendo incrível,
-            e a cada dia q passa, eu me sinto mais feliz ao seu lado!!!
-            Eu nunca vou desistir de você minha cachiadinha!!
-            Obrigado por fazer parte de todos meus dias, obrigado por conseguir
-            alegramos, você e minha melhor amiga!!
-            Meu primeiro e único amor!!!
+    <!-- MOMENTO 1 -->
+    <div class="momento">
+        <p class="legenda">14/06/2026</p>
+        <p class="legenda">
+            Nossa primeira foto
         </p>
 
-        <div class="final">
-            eu te amo infinitamente
-        </div>
-
-    </section>
-
-</div>
+        <img src="IMG_20260225_072054_524.jpg" alt="Nossa primeira foto">
+    </div>
 
 
-<script>
+    <!-- MOMENTO 2 -->
+    <div class="momento">
+        <p class="legenda">30/03/2026</p>
+        <p class="legenda">
+            vc não esqueceu disso né?
+        </p>
 
-const inicio = new Date("2024-12-27T00:00:00");
+        <video controls>
+            <source src="VID_20260330_080024~2.mp4" type="video/mp4">
+            Seu navegador não consegue reproduzir este vídeo.
+        </video>
+    </div>
 
-function atualizarContador() {
 
-    const agora = new Date();
+    <!-- MOMENTO 3 -->
+    <div class="momento">
+        <p class="legenda">26/05/2026</p>
+        <p class="legenda">
+            Nossa família!!
+        </p>
 
-    let anos = agora.getFullYear() - inicio.getFullYear();
-    let meses = agora.getMonth() - inicio.getMonth();
+        <img src="foto-principal.jpg" alt="Nossa família">
+    </div>
 
-    if (agora.getDate() < inicio.getDate()) {
-        meses--;
-    }
 
-    if (meses < 0) {
-        anos--;
-        meses += 12;
-    }
+    <!-- MOMENTO 4 -->
+    <div class="momento">
+        <p class="legenda">05/11/2025</p>
+        <p class="legenda">
+            Quando você não apareceu pra me ver😔
+        </p>
 
-    const dias = Math.floor(
-        (agora - inicio) / (1000 * 60 * 60 * 24)
-    );
+        <img src="momento-21-11-2025.jpg" alt="Quando você não apareceu pra me ver">
+    </div>
 
-    document.getElementById("contador").innerHTML =
-        anos + " anos • " +
-        meses + " meses • " +
-        dias + " dias juntos";
-}
-
-atualizarContador();
-
-setInterval(atualizarContador, 1000);
-
-</script>
-
-</body>
-</html>
+</section>
