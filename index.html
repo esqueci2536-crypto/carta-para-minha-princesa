@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+
+    <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -76,7 +78,7 @@ h1 {
 }
 
 .momento {
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .momento img,
@@ -107,7 +109,6 @@ h1 {
 
 <div class="carta">
 
-    <!-- APRESENTAÇÃO -->
     <section class="pagina">
         <h1>Para minha princesa!</h1>
 
@@ -117,7 +118,6 @@ h1 {
     </section>
 
 
-    <!-- MÚSICA -->
     <section class="pagina">
         <h2>Nossa música</h2>
 
@@ -132,7 +132,6 @@ h1 {
     </section>
 
 
-    <!-- NOSSA HISTÓRIA -->
     <section class="pagina">
 
         <h2>Nossa história começou</h2>
@@ -148,7 +147,6 @@ h1 {
     </section>
 
 
-    <!-- TEXTO PRINCIPAL -->
     <section class="pagina">
 
         <p class="texto">
@@ -165,66 +163,122 @@ h1 {
     </section>
 
 
-   <!-- MOMENTOS -->
-<section class="pagina">
+    <section class="pagina">
 
-    <h2>Momentos</h2>
-
-    <!-- MOMENTO 1 -->
-    <div class="momento">
-        <p class="legenda">14/06/2026</p>
-        <p class="legenda">Nossa primeira foto</p>
-
-        <img src="IMG_20260225_072054_524.jpg" alt="Nossa primeira foto">
-    </div>
+        <h2>Momentos</h2>
 
 
-    <!-- MOMENTO 2 -->
-    <div class="momento">
-        <p class="legenda">30/03/2026</p>
-        <p class="legenda">vc não esqueceu disso né?</p>
+        <div class="momento">
 
-        <video controls>
-            <source src="VID_20260330_080024~2.mp4" type="video/mp4">
-            Seu navegador não consegue reproduzir este vídeo.
-        </video>
-    </div>
+            <p class="legenda">14/06/2026</p>
 
+            <img src="NOME-DA-FOTO-1.jpg">
 
-    <!-- MOMENTO 3 -->
-    <div class="momento">
-        <p class="legenda">26/05/2026</p>
-        <p class="legenda">Nossa família!!</p>
+            <p class="legenda">
+                Nossa primeira fotoo
+            </p>
 
-        <img src="foto-principal.jpg" alt="Nossa família">
-    </div>
+        </div>
 
 
-    <!-- MOMENTO 4 -->
-    <div class="momento">
-        <p class="legenda">05/11/2025</p>
-        <p class="legenda">Quando você não apareceu pra me ver😔</p>
+        <div class="momento">
 
-        <img src="momento-21-11-2025.jpg" alt="Quando você não apareceu pra me ver">
-    </div>
+            <p class="legenda">30/03/2026</p>
 
-</section>
+            <video controls>
+                <source src="NOME-DO-VIDEO.mp4" type="video/mp4">
+            </video>
+
+            <p class="legenda">
+                vc não esqueceu disso né?
+            </p>
+
+        </div>
 
 
-<!-- TEXTO FINAL -->
-<section class="pagina">
+        <div class="momento">
 
-    <p class="texto">
-        Meu amor, nossa história não está sendo fácil, mais está sendo incrível,
-        e a cada dia q passa, eu me sinto mais feliz ao seu lado!!!
-        Eu nunca vou desistir de você minha cachiadinha!!
-        Obrigado por fazer parte de todos meus dias, obrigado por conseguir
-        alegramos, você e minha melhor amiga!!
-        Meu primeiro e único amor!!!
-    </p>
+            <p class="legenda">26/05/2026</p>
 
-    <div class="final">
-        eu te amo infinitamente
-    </div>
+            <img src="NOME-DA-FOTO-2.jpg">
 
-</section>
+            <p class="legenda">
+                Nossa família!!
+            </p>
+
+        </div>
+
+
+        <div class="momento">
+
+            <p class="legenda">05/11/2025</p>
+
+            <img src="NOME-DA-FOTO-3.jpg">
+
+            <p class="legenda">
+                Quando você não apareceu pra me ver😔
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="pagina">
+
+        <p class="texto">
+            Meu amor, nossa história não está sendo fácil, mais está sendo incrível,
+            e a cada dia q passa, eu me sinto mais feliz ao seu lado!!!
+            Eu nunca vou desistir de você minha cachiadinha!!
+            Obrigado por fazer parte de todos meus dias, obrigado por conseguir
+            alegramos, você e minha melhor amiga!!
+            Meu primeiro e único amor!!!
+        </p>
+
+        <div class="final">
+            eu te amo infinitamente
+        </div>
+
+    </section>
+
+</div>
+
+
+<script>
+
+const inicio = new Date("2024-12-27T00:00:00");
+
+function atualizarContador() {
+
+    const agora = new Date();
+
+    let anos = agora.getFullYear() - inicio.getFullYear();
+    let meses = agora.getMonth() - inicio.getMonth();
+
+    if (agora.getDate() < inicio.getDate()) {
+        meses--;
+    }
+
+    if (meses < 0) {
+        anos--;
+        meses += 12;
+    }
+
+    const dias = Math.floor(
+        (agora - inicio) / (1000 * 60 * 60 * 24)
+    );
+
+    document.getElementById("contador").innerHTML =
+        anos + " anos • " +
+        meses + " meses • " +
+        dias + " dias juntos";
+}
+
+atualizarContador();
+
+setInterval(atualizarContador, 1000);
+
+</script>
+
+</body>
+</html>
